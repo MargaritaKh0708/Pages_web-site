@@ -1,0 +1,39 @@
+.circle{
+    border: 1px solid $c-main-yellow;
+    background: $c-main-yellow;
+    border-radius: 100px;
+    position: relative;
+    display: block;
+    height: 16px;
+    width: 16px;
+
+    &--size-50 {
+        height: 50px;
+        width: 50px;
+    }
+
+    &--size-13 {
+        height: 12.67px;
+        width: 12.67px;
+    }
+
+    &--size-20 {
+        height: 20px;
+        width: 20px;
+    }
+
+    &--size-2 {
+        border: 1.5px solid $c-main-yellow;
+        height: 2px;
+        width: 2px;
+    }
+
+    &--empty {
+        background: none;
+    }
+
+    &--half {
+        background: linear-gradient($c-main-yellow 50%, $c-transparent 0);
+        transform: rotate(-90deg);
+    }
+}

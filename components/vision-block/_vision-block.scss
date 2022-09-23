@@ -1,0 +1,108 @@
+.vision-block {
+  background: $c-light-blue-bg;
+
+  &__inner {
+    padding-bottom: 130px;
+    padding-top: 118px;
+  }
+
+  &__chapter-list {
+    justify-content: space-between;
+    padding-top: 70px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  &__footer {
+    justify-content: center;
+    flex-direction: column;
+    @include description;
+    align-items: center;
+    text-align: center;
+    margin-top: 72px;
+    font-size: 18px;
+    display: flex;
+  }
+
+  &__chapter-descrip, &__contacts span {
+    padding-top: 34px;
+    color: $c-main-gray;
+    
+  }
+  &__contacts {
+    color: $c-main-blue;
+  }
+}
+
+.vision-item {
+  padding: 42px 45px 44px 40px;
+  background: $c-white;
+  margin-right: 30px;
+  flex: 0 0 48.5%;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+    padding-left: 52px;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4)  {
+    margin-top: 40px;
+  }
+
+  &__title {
+    color: $c-main-blue;
+    @include f-Cardo;
+    line-height: 29px;
+    font-size: 24px;
+  }
+
+  &__description {
+    @include description;
+    color: $c-main-gray;
+    padding-top: 22px;
+    line-height: 32px;
+  }
+;
+  &__features {
+    align-items: center;
+    padding-top: 5px;
+    display: flex;
+  }
+
+  &__feature {
+    @extend .vision-item__features;
+
+    & p {
+      color: $c-main-blue;
+      padding-left: 10px;
+      line-height: 31px;
+      @include f-Cardo;
+      font-size: 22px;
+    }
+
+    & span {
+      color: $c-main-gray;
+      padding-left: 15px;
+      line-height: 27px;
+      @include f-Inter;
+      font-size: 17px;
+    }
+
+    &:last-of-type {
+      padding-left: 52px;
+    }
+  }
+}
+
+
+.trail-btn {
+  background: $c-main-yellow;
+  text-transform: capitalize;
+  padding: 24px 92px 23px;
+  letter-spacing: 0.57px;
+  color: $c-main-blue;
+  text-align: center;
+  @include f-Cardo;
+  @include description;
+}

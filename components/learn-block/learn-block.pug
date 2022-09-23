@@ -1,0 +1,13 @@
+include ./learn-item
+
+mixin learn-block 
+    section.learn-block
+        .learn-block__inner.container 
+            +block-title('What Will You Learn?')(class='block-title__separator--title-size')
+            .learn-block__content 
+                .learn-block__items 
+                    +learn-item('01','Use HDFS & Map Reduce for storing & analyzing data at scale.')
+                    +learn-item('02','Consume streaming data using Spark Streaming, Flink, and Storm.')
+                    +learn-item('03','Choose an appropriate data storage technology for your application')
+                    +learn-item('04','Analyze non-relational data using HBase, Cassandra, and MongoDB.')
+                .bordered-cover.bordered-cover--img.bordered-cover--size

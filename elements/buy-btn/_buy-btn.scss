@@ -1,0 +1,25 @@
+.buy-btn {
+
+    border: 1px solid $c-main-yellow;
+    padding: 18px 52px 19px 52px;   
+    width: fit-content;
+
+    &--color {
+        color:$c-white;
+    }
+
+    &__title {
+        white-space: nowrap;
+        text-transform: capitalize;
+        letter-spacing: 0.57px;
+        line-height: 28px;
+        @include f-Cardo;
+        font-size: 19px;
+    }
+
+    &--order {
+    background: $c-main-yellow;
+    }
+}
+
+

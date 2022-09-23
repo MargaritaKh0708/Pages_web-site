@@ -1,0 +1,16 @@
+include ./article-card
+
+mixin article-slider 
+    .article-slider.swiper
+        .article-slider__slider-list.swiper-wrapper 
+            .article-slider__slide.swiper-slide(data-hash='slide-1')
+                .article-slider__card
+                    +article-card('../../assets/images/articles-block/article_1.png', 'Significant reading has more info number', 'Override the digital divide with additional clickthroughs from DevOps for real-time schemas.')
+            .article-slider__slide.swiper-slide(data-hash='slide-2')
+                .article-slider__card
+                    +article-card('../../assets/images/articles-block/article_2.png', 'Many variations of pass majority have suffered', 'Capitalize on low-hanging fruit to identify a ballpark value-added activity to beta test.')
+            .article-slider__slide.swiper-slide(data-hash='slide-3')
+                .article-slider__card
+                    +article-card('../../assets/images/articles-block/article_3.png', 'Words which don’t look even slightly believable', 'Podcasting operational change management inside of workflows to establish a framework.')
+        .article-slider__button-next.swiper-button-next
+        .article-slider__button-prev.swiper-button-prev

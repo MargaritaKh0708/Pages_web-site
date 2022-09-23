@@ -1,0 +1,13 @@
+include ../../elements/circle/circle
+
+
+mixin review-item(userIcon, userName, mark, title, review)
+    .review-item
+        .review-item__user 
+            .review-item__user-icon    
+                img(src=userIcon, alt=userName)
+            .review-item__user-info   
+                p(class='review-item__user-name')=userName
+                +user-mark(mark)(class='circle--size-13')
+        .review-item__title=title
+        .review-item__text=review

@@ -1,0 +1,10 @@
+
+mixin circle(fill)
+    case fill 
+        when 'empty'
+            span(class='circle circle--empty')&attributes(attributes)
+        when 'half'
+            span(class='circle circle--half')&attributes(attributes)
+        default
+            span(class='circle')&attributes(attributes)
+    

@@ -1,0 +1,15 @@
+include ../../elements/circle/circle
+include ../../elements/buy-btn/buy-btn
+
+mixin book (cover, title, price, description)
+    .book 
+        .book__cover 
+            img(src=cover, alt='cover')
+        .book__info
+            p.book__title=title 
+            p.book__price=price 
+            p.book__descrip=description
+            .book__type
+                +circle 
+                p.book__type-title Printed Book
+            +buy-btn('Order Now')

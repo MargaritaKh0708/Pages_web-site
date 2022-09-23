@@ -1,0 +1,9 @@
+include ../../elements/block-title/block-title
+include ./article-slider
+
+
+mixin article-block 
+    section.article-block 
+        .article-block__inner.container
+            +block-title('Articles & Resources')(class='block-title__separator--title-size')
+            +article-slider

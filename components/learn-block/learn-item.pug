@@ -1,0 +1,6 @@
+mixin learn-item (number, text)
+    .learn-item 
+        .learn-item__count
+            +circle(class='circle--size-50')
+            span(class='learn-item__number')=number
+        p(class='learn-item__text')=text

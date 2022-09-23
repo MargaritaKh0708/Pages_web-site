@@ -1,0 +1,19 @@
+include ../../elements/circle/circle
+
+mixin book-features-list
+    ul.book-features
+            li.book-features__item
+                +circle
+                .book-features__descrip
+                    p.book-features__descrip-title Pages:
+                    p.book-features__descrip-text 250pages
+            li.book-features__item
+                +circle
+                .book-features__descrip
+                    p.book-features__descrip-title Length:
+                    p.book-features__descrip-text 10 Hours
+            li.book-features__item
+                +circle
+                .book-features__descrip
+                    p.book-features__descrip-title Rating:
+                    p.book-features__descrip-text 4.5/5 (305 ratings)

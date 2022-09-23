@@ -1,0 +1,15 @@
+include ../../elements/circle/circle
+
+mixin vision-item (title, description, pages, length)
+    .vision-item 
+        .vision-item__title=title
+        .vision-item__description=description
+        .vision-item__features 
+            .vision-item__feature 
+                +circle 
+                p Pages :
+                span=pages
+            .vision-item__feature
+                +circle 
+                p Length :
+                span=length

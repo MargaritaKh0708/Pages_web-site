@@ -1,0 +1,41 @@
+include components/header/header
+include components/presentation-block/presentation-block
+include components/about-authors-block/about-authors-block
+include components/authors-block/author-block
+include components/trusted-block/trusted-block
+include components/get-book-block/get-book-block
+include components/learn-block/learn-block
+include components/vision-block/vision-block 
+include components/review-block/review-block
+include components/subscribe-block/subscribe
+include components/articles-block/article-block 
+include components/footer/footer
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
+        script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+        link(rel="stylesheet", href="index.css")
+        title Document
+    body
+        .app
+            +header
+            +presentation-block
+            +about-authors-block
+            +author-block
+            +trusted-block
+            +get-book-block
+            +learn-block
+            +vision-block 
+            +review-block(4.5)
+            +article-block 
+            +subscribe-block
+            +footer-block
+        script 
+            include index.js

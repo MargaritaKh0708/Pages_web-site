@@ -1,0 +1,94 @@
+.footer {
+  background: $c-main-blue;
+
+  &__inner {
+    justify-content: space-between;
+    padding: 92px 70px 24px;
+    flex-direction: column;
+    display: flex;
+  }
+
+  &__content {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  &__socials-list {
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__sub-content {
+		color: $c-light-blue-subtext;
+		letter-spacing: 0.17px;
+		align-self: center;
+		padding-top: 95px;
+		line-height: 26px;
+		@include f-Inter;
+		font-size: 17px;
+
+		& a {
+			color: $c-white;
+		}
+  }
+}
+
+.footer-list {
+  flex-direction: column;
+  display: flex;
+
+	&--align {
+		align-self: center;	
+	}
+
+  &__title {
+		letter-spacing: 0.384px;
+		padding-bottom: 24px;
+    line-height: 34px;
+    @include f-Cardo;
+    font-size: 24px;
+    color: $c-white;
+  }
+
+  &__item {
+    color: $c-light-blue-subtext;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    letter-spacing: 0.18px;
+    align-items: center;
+    line-height: 31px;
+    @include f-Inter;
+    display: flex;
+
+    & span {
+      margin-right: 3px;
+
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Contacts styles
+
+.contacts {
+  &__item{
+		justify-content: space-between;
+		padding-bottom: 28px;
+    letter-spacing: 0.36px;
+    line-height: 27px;
+    color: $c-white;
+    @include f-Cardo;
+		display: flex;
+  }
+  &__subtext {
+    color: $c-light-blue-subtext;
+    line-height: 27px;
+    @include f-Inter;
+    font-size: 17px;
+		flex: 0 0 59%;
+  }
+}

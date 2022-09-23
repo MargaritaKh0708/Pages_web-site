@@ -1,0 +1,17 @@
+include ../../elements/block-title/block-title
+include ./vision-item
+
+mixin vision-block 
+    section.vision-block 
+        .vision-block__inner.container 
+            +block-title('Enhance knowledge & Vision')(class='block-title__separator--title-size')
+            .vision-block__chapter-list
+                +vision-item('Chapter-1 Get Started Intro', 'You can double your knowledge by reading this ever needed book that can last a lifetime.', '106pages', '2 Hours')
+                +vision-item('Chapter-2 The Roman Culture', 'It will help to improve your life career with the perfect and needed knowledge about your life.','180pages', '3 Hours')
+                +vision-item('Chapter-3 How They Servived', 'We wanted to create an easy, convenient way for you to get your books & support.', '250pages', '4 Hours')
+                +vision-item('Chapter-4 The End Of Romans', 'Promote your book via Pages shop to support your writing & reading career.', '175pages','3 Hours')
+            .vision-block__footer 
+                button(type='submit').trail-btn Start a 15-Days Free Trail
+                a(href='#').vision-block__chapter-descrip Short description about each chapter
+                a(href='#').vision-block__contacts Have any questions? 
+                    span Contact us

@@ -1,0 +1,13 @@
+include ../../elements/buy-btn/buy-btn
+
+mixin get-book-block
+    section.get-book-block 
+        .get-book-block__inner.container
+            .get-book-block__content
+                .block-title.block-title--align
+                        h2.block-title__text.block-title__text--color Get Book Copy Today!
+                        span.block-title__separator.block-title__separator--title-size
+                p.get-book-block__description We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers.
+                +buy-btn('Order Today')(class='buy-btn--color')
+            .get-book-block__cover
+                img(src='../../assets/images/book-and-tea.png', alt='get-book')

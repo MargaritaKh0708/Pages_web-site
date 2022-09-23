@@ -1,0 +1,45 @@
+.block-title  {
+  flex-direction: column;
+  align-items: center;
+  // padding-left: 40px;
+  margin: 0 auto;
+  display: flex;
+
+  &--align {
+    align-items: flex-start;
+    text-align: start;
+    padding: 0;
+    margin: 0;
+  }
+
+ &__text {
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+  color: $c-main-blue;
+  line-height: 50.4px;
+  font-weight: 400;
+  font-size: 44px;
+
+  &--color {
+    letter-spacing: 2px;
+    color: $c-white;
+  }
+}
+
+  &__separator {
+    background: $c-main-yellow;
+    margin-top: 23px;
+
+    &--title-size {
+      height: 3px;
+      width: 50px;
+    }
+    
+    &--blue {
+    background: $c-main-blue;
+  }
+
+  }
+
+  
+}

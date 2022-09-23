@@ -1,0 +1,13 @@
+
+
+mixin article-card(cover, title, preview)
+    .article-card 
+        .article-card__cover
+            img(data-src=cover, src=cover, alt=title).swiper-lazy
+            .swiper-lazy-preloader
+        .article-card__descrip
+            p.article-card__title=title
+            p.article-card__preview=preview 
+            .article-card__info
+                a.article-card__more(href='#') Readmore
+                p.article-card__date October 6, 2021

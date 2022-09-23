@@ -1,0 +1,56 @@
+%font {
+  color: $c-light-blue-subtext;
+  line-height: 28.5px;
+  @include f-Inter;
+  font-size: 18px;
+}
+
+%href {
+  color: $c-light-blue-subtext;
+  letter-spacing: 0.19px;
+}
+
+.qr-code {
+  background: $c-main-blue;
+  padding: 15px 20px 16px;
+  align-items: center;
+  width: fit-content;
+  margin-top: 54px;
+  display: flex;
+
+  &__img {
+    height: 130px;
+    width: 130px;
+  }
+}
+.contacts {
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  display: flex;
+
+  &__name {
+    color: $c-main-yellow;
+    line-height: 26.4px;
+    @include f-Cardo;
+    font-size: 22px;
+  }
+
+  &__email {
+    padding-top: 10px;
+    @extend %font;
+
+    & a {
+      @extend %href;
+    }
+  }
+
+  &__phone {
+    padding-top: 4px;
+    @extend %font;
+
+    & a {
+      @extend %href;
+    }
+  }
+}

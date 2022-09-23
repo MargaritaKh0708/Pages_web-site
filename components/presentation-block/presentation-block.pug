@@ -1,0 +1,20 @@
+
+include ./book-features-list
+include ../../elements/buy-btn/buy-btn
+
+mixin presentation-block
+    section.presentation-block
+        .presentation-block__inner.container
+            .presentation-block__item
+                p.presentation-block__subtitle 
+                    span.separator
+                    span Welcome to Pages!!!
+                h1.presentation-block__title Your Books From The Best Writer.
+                p.presentation-block__descrip We believe that reading books are essential to a healthy culture. <br/> They’re where authors can connect with readers.
+                .presentation-block__order-part
+                    +buy-btn('Order Today')(class='buy-btn--order')
+                    button.presentation-block__demo Read Free Demo
+                +book-features-list
+            .presentation-block__item
+                .presentation-block__book
+                    img(src='../../assets/images/main-book.png', alt='book')

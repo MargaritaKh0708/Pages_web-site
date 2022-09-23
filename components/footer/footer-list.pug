@@ -1,0 +1,11 @@
+
+
+mixin footer-list(title, itemValues)
+    .footer-list
+        .footer-list__title=title
+        ul.footer-list__items 
+            each value in itemValues
+                li.footer-list__item=value
+                    +circle(class='circle--size-2')
+                    +circle(class='circle--size-2')
+                    +circle(class='circle--size-2')

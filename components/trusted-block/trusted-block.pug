@@ -1,0 +1,12 @@
+include ./trusted-element
+include ../../elements/block-title/block-title
+
+mixin trusted-block
+    section.trusted-block
+        .trusted-block__inner.container
+            +block-title('Trusted By The Best')(class='block-title__separator--title-size')
+            .trusted-block__list
+                +trusted-element('../../assets/images/trust-block/icon-1.png', 'Amazen Corp.','They has been helping readers, music lovers, and videophiles find quality material.')
+                +trusted-element('../../assets/images/trust-block/icon-2.png','Megan Books','We help physical bookstores manage their overstock to the book inventory.')
+                +trusted-element('../../assets/images/trust-block/icon-3.png','Megank','Bookstore serving up the full spectrum of Black literature and wine black books.')
+                +trusted-element('../../assets/images/trust-block/icon-4.png','Urban Store','We also carry the latest records, issues of all of your favorite comic books.')

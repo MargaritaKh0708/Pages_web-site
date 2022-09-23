@@ -1,0 +1,24 @@
+
+include ./qr-block
+
+
+mixin author-block
+    section.author-block
+        .author-block__inner.container 
+            .bordered-cover
+            .author-block__content
+                .block-title.block-title--align
+                    h2.block-title__text About the Author
+                    span.block-title__separator.block-title__separator--title-size
+                p.author-block__text We believe that bookstores are essential to a healthy culture.<br> They’re where authors can connect with readers, where we discover new writers, where children get hooked on the thrill <br> of reading that can last a lifetime.
+                ul.rewards-list
+                    li.rewards-list__item
+                        p.rewards-list__num 02
+                        p.rewards-list__descrip Books Published
+                    li.rewards-list__item
+                        p.rewards-list__num 4.5
+                        p.rewards-list__descrip User Reviews
+                    li.rewards-list__item
+                        p.rewards-list__num 04
+                        p.rewards-list__descrip Best Seller Awards
+                +qr-code

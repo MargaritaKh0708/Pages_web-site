@@ -1,0 +1,105 @@
+// Article block style
+
+.article-block {
+
+  background: $c-light-blue-bg;
+
+  &__inner {
+    padding-bottom: 140px;
+    padding-top: 126px;
+  }
+}
+
+
+
+
+
+// Article card styles
+
+.article-card {
+  @include box-shadow (13px, #00000012);
+  flex-direction: column;
+  border-radius: 5px;
+  display: flex;
+
+  &__cover {
+    flex: 0 0 56%;
+  }
+
+  &__descrip {
+    @extend .article-card;
+    background: $c-white;
+    border-radius: 0;
+    padding: 30px;
+  }
+	&__title {
+		letter-spacing: 0.24px;
+		color: $c-main-blue;
+		line-height: 34px;
+		@include f-Cardo;
+		font-size: 24px;
+	}
+
+	&__preview {
+		color: $c-main-gray;
+		padding-top: 19px;
+		line-height: 30px;
+		@include f-Inter;
+		font-size: 19px;
+	}
+
+	&__info {
+		justify-content: space-between;
+		padding-top: 13.34px;
+		align-items: center;
+		display: flex;
+
+		& a {
+			color: $c-main-blue;
+		}
+	}
+
+	&__more {
+		border-bottom: 1px solid $c-main-blue;
+
+		&:hover {
+			color: $c-light-blue-subtext;
+		}
+	}
+
+  &__date {
+    color: $c-main-blue;
+    line-height: 26px;
+    @include f-Inter;
+    font-size: 16px;
+  }
+}
+
+
+// Slider 
+
+.article-slider {
+  padding: 70px 0 10px;
+
+
+& .swiper-button-next::after,
+& .swiper-button-prev::after
+{	
+	color: $c-main-blue;
+	position: relative;
+	font-size: 25px;
+	z-index: 1;
+}
+
+& .swiper-button-next::before,
+& .swiper-button-prev::before {
+	background: $c-main-yellow;
+	border-radius: 50%;
+	position: absolute;
+	height: 50px;
+	content: '';
+	width: 50px;
+}
+
+
+}

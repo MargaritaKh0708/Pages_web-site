@@ -1,0 +1,98 @@
+.author-block {
+  background: $c-light-blue-bg;
+
+  &__inner {
+    justify-content: space-between;
+    padding-bottom: 140px;
+    align-items: center;
+    padding-top: 180px;
+    display: flex;
+  }
+
+
+  &__content {
+    flex-direction: column;
+    display: flex;
+    flex: 0 0 45%;
+  }
+
+  &__text {
+    color: $c-main-gray;
+    padding-top: 26px;
+    line-height: 34px;
+    @include f-Inter;
+    font-size: 19px;
+  }
+}
+.rewards-list {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 42px;
+  display: flex;
+
+  &__item {
+    border-left: 1px solid $c-main-yellow;
+    flex-direction: column;
+    padding-left: 37px;
+    flex: 1 1 33%; //!
+    display: flex;
+  
+
+
+    &:first-of-type{
+      padding-left: 10px;
+      border: none;
+    }
+
+    &:nth-of-type(2){
+      padding-right: 14px;
+    }
+  }
+
+  &__num {
+    color: $c-main-blue;
+    @include f-Cardo;
+    font-size: 54px;
+  }
+
+  &__descrip {
+    color: $c-main-gray;
+    line-height: 22px;
+    padding-top: 6px;
+    @include f-Inter;
+    font-size: 17px;
+  }
+
+}
+
+
+.bordered-cover {
+  border: 10px solid $c-main-yellow;
+  position: relative;
+  height: 642px;
+  width: 545px;
+
+  &::after {
+    content: url('../../assets/images/man.png');
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  & img {
+    position: absolute;
+  }
+
+  &--img {
+    &::after {
+      content: url('../../assets/images/girl.png');
+      bottom: 0px;
+      right: 0px;
+  }
+}
+  &--size {
+    margin-left: 20px;
+    height: 652px;
+    width: 555px;
+  }
+}

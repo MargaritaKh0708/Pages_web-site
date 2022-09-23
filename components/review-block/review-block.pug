@@ -1,0 +1,21 @@
+include ./review-item
+include ../../elements/rating/user-mark
+
+
+mixin review-block(mark)
+    section.review-block 
+        .review-block__inner.container 
+            .review-block__content 
+                .block-title.block-title--align
+                    h2.block-title__text Words From Our <br> Readers
+                    span.block-title__separator.block-title__separator--title-size
+                p.review-block__text We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers, where we discover new writers, where children get hooked on the thrill of reading that can last a lifetime.
+                .review-block__rating
+                    +user-mark(mark)(class='circle--size-20')
+                    span (4.8/5)
+                p.review-block__rating-title Overall Customer Ratings
+            .review-block__reviews
+                +review-item('../../assets/images/review-block/user_1.png', 'James Williams', 4.5, '“Great Books Collections”', 'I was searching this book for many years and I was happy that I could find it here.')
+                +review-item('../../assets/images/review-block/user_2.png', 'Chris Adams', 4, '“ Perfect Response Author”', 'I had a question about the book and the author response was great & comfort.')
+                +review-item('../../assets/images/review-block/user_3.png', 'Angeline Flora', 4.5, '“ Creative Writing Skill”', 'Sent an email after to books arrived to ask about the author & I received a reply.')
+

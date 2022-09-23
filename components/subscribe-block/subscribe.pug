@@ -1,0 +1,12 @@
+
+
+mixin subscribe-block 
+    section.subscribe-block 
+        .subscribe-block__inner.container 
+            .subscribe-block__content
+                +block-title('Get The Best Updates')(class='block-title__separator--blue block-title__separator--title-size')
+                p.subscribe-block__subtitle Subscribe with your mail id to know the current update in book <br> edition at your fingertip with in a minute.
+                form(action='post').subscribe-form
+                    label(for='email').subscribe-form__label
+                        input(type='email', name='email', placeholder='Your Email ID...').subscribe-form__input
+                    button(type='submit').subscribe-form__btn Subscribe

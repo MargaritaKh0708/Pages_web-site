@@ -1,0 +1,77 @@
+//! Mixins
+
+
+//? Fonts
+
+@mixin f-Inter {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@mixin f-Cardo {
+    font-family: 'Cardo', serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+// Shadow
+
+@mixin box-shadow ($blur-radius, $color) {
+    box-shadow: 0px 0px $blur-radius $color;
+}
+
+//Description styles
+
+@mixin description {
+    line-height: 28px;   //TODO change everywhere
+    @include f-Inter;
+    font-size: 19px;
+}
+
+
+// Window sizes map
+
+$sizes: (
+    'mobile':375px,
+    'mobile-horizontal':812px,
+    'iPad':1024px,
+    'hd':1280px,
+    'iPad-horizontal':1366px,
+    'fullHd':1920px,
+    '2K':2560px
+);
+
+// Media
+@function getPreviousSize($currentSize) {
+    $keys: map-keys($sizes);
+    $index: index($keys, $currentSize)-1;
+    $value: map-values($sizes);
+    @return nth($value, $index);
+}
+
+@mixin media($minmax, $media) {
+
+    @each $size,
+    $resolution in $sizes {
+        @if $media ==$size {
+            @if ($minmax  !="within") {
+                @media only screen and (#{$minmax}-width: (($resolution))) {
+                    @content;
+                }
+            }
+            @else {
+                @if (index(map-keys($sizes), $media) > 1) {
+                    @media (min-width: (getPreviousSize($media))) and (max-width: (($resolution)-1)) {
+                        @content;
+                    }
+                }
+                @else {
+                    @media (max-width: $resolution) {
+                        @content;
+                    }
+                }
+            }
+        }
+    }
+}

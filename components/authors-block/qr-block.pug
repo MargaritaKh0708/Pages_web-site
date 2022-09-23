@@ -1,0 +1,10 @@
+mixin qr-code 
+    .qr-code 
+        .qr-code__img
+            img(src='../../assets/images/qr-code.png', alt='qr-code')
+        .contacts
+            p.contacts__name John Abraham , Ph.d
+            p.contacts__email Mail: 
+                a(ref = "mailto: johnabraham@gmail.com") johnabraham@gmail.com
+            p.contacts__phone Phone: 
+                a(href="tel:(+2) 123 545 9000") (+2) 123 545 9000

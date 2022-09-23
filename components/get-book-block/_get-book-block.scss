@@ -1,0 +1,34 @@
+.get-book-block {
+    background: $c-main-blue;
+
+    &__inner {
+        justify-content: space-between;
+        padding-bottom: 60px;
+        align-items: center;
+        padding-top: 74px;
+        display: flex;
+    }
+
+    &__content {
+        flex-direction: column;
+        display: flex;
+        gap: 27px;
+    }
+
+    &__description {
+        color: $c-light-blue-subtext;
+        @include description;
+        max-width: 74%;
+    }
+
+    &__cover {
+        align-self: center;
+
+        & img{
+        object-fit: contain;
+        max-width: 560px;
+    }
+    }
+    
+    
+}

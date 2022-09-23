@@ -1,0 +1,10 @@
+include ../../elements/block-title/block-title
+include ./book
+
+mixin about-authors-block
+    section.about-authors-block
+        .about-authors-block__inner.container 
+            +block-title('The Author’s Book')(class='block-title__separator--title-size')
+            .about-authors-block__books 
+                +book('../../assets/images/book_1.png', 'Atomic One’s', '$ 13.84 USD', 'As the book contains theoretical content as well as solved questions.')
+                +book('../../assets/images/book_2.png', 'The Dark Light', '$ 86.11 USD', 'As the book contains theoretical content as well as solved questions.')
