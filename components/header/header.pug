@@ -1,5 +1,6 @@
 include ./social-btn
 include ../../elements/buy-btn/buy-btn
+include ../../elements/burger/burger
 
 mixin header 
     header.header
@@ -24,3 +25,4 @@ mixin header
                 button(type='button').cart-btn
                     img(src='./assets/images/icons/cart.svg' alt='cart')
                 +buy-btn('Order Today')(class='buy-btn--order')
+            +burger

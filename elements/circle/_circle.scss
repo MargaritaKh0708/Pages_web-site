@@ -7,6 +7,11 @@
     height: 16px;
     width: 16px;
 
+    @include media('max', 'iPad') {
+        height: 12px;
+    width: 12px;
+    }
+
     &--size-50 {
         height: 50px;
         width: 50px;

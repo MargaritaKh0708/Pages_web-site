@@ -1,24 +1,27 @@
 .trusted-block {
+  &__inner {
+    padding: 126px 0;
 
-&__inner {
-padding: 126px 0;
- }
+    @include media("max", "iPad") {
+      padding: 80px 0;
+    }
+  }
 
   &__list {
     justify-content: space-between;
-    align-items: center;
     padding-top: 50px;
-  display: flex;
-  gap: 16px;
+    @include flex-row;
+    gap: 16px;
+
+    @include media("max", "iPad") {
+      display: none;
+    }
   }
 }
 
-
 .trusted-element {
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
-  display: flex;
-
 
   &__icon {
     height: 100px;
@@ -26,21 +29,26 @@ padding: 126px 0;
   }
 
   &__title {
-    color: $c-main-blue;
+    @include font-properties(34px, $c-main-blue);
+    @include f-Cardo(24px);
     text-align: center;
     padding-top: 22px;
-    line-height: 34px;
-    @include f-Cardo;
-    font-size: 24px;
   }
 
   &__description {
-    color: $c-main-gray;
-    padding-top: 16px;
+    @include font-properties(28px, $c-main-gray);
+    @include f-Inter(19px);
     text-align: center;
-    line-height: 28px;
-    @include f-Inter;
-    font-size: 19px;
+    padding-top: 16px;
     max-width: 80%;
+  }
+}
+
+.trusted-slider {
+  display: none;
+
+  @include media("max", "iPad") {
+    margin-top: 30px;
+    display: block;
   }
 }

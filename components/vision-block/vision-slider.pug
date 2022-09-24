@@ -1,0 +1,19 @@
+include ./vision-item
+
+mixin vision-slider 
+    .vision-slider.swiper
+        .vision-slider__slider-list.swiper-wrapper 
+            .vision-slider__slide.swiper-slide(data-hash='slide-1')
+                .vision-slider__card
+                    +vision-item('Chapter-1 Get Started Intro', 'You can double your knowledge by reading this ever needed book that can last a lifetime.', '106pages', '2 Hours')
+            .vision-slider__slide.swiper-slide(data-hash='slide-2')
+                .vision-slider__card
+                    +vision-item('Chapter-2 The Roman Culture', 'It will help to improve your life career with the perfect and needed knowledge about your life.','180pages', '3 Hours')
+            .vision-slider__slide.swiper-slide(data-hash='slide-3')
+                .vision-slider__card
+                    +vision-item('Chapter-3 How They Servived', 'We wanted to create an easy, convenient way for you to get your books & support.', '250pages', '4 Hours')
+            .vision-slider__slide.swiper-slide(data-hash='slide-3')
+                .vision-slider__card
+                    +vision-item('Chapter-4 The End Of Romans', 'Promote your book via Pages shop to support your writing & reading career.', '175pages','3 Hours')
+        .vision-slider__button-next.swiper-button-next
+        .vision-slider__button-prev.swiper-button-prev

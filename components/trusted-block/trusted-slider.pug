@@ -1,0 +1,19 @@
+include ./trusted-element
+
+mixin trusted-slider 
+    .trusted-slider.swiper
+        .trusted-slider__slider-list.swiper-wrapper 
+            .trusted-slider__slide.swiper-slide(data-hash='slide-1')
+                .trusted-slider__card
+                    +trusted-element('../../assets/images/trust-block/icon-1.png', 'Amazen Corp.','They has been helping readers, music lovers, and videophiles find quality material.')
+            .trusted-slider__slide.swiper-slide(data-hash='slide-2')
+                .trusted-slider__card
+                    +trusted-element('../../assets/images/trust-block/icon-2.png','Megan Books','We help physical bookstores manage their overstock to the book inventory.')
+            .trusted-slider__slide.swiper-slide(data-hash='slide-3')
+                .trusted-slider__card
+                    +trusted-element('../../assets/images/trust-block/icon-3.png','Megank','Bookstore serving up the full spectrum of Black literature and wine black books.')
+            .trusted-slider__slide.swiper-slide(data-hash='slide-3')
+                .trusted-slider__card
+                    +trusted-element('../../assets/images/trust-block/icon-4.png','Urban Store','We also carry the latest records, issues of all of your favorite comic books.')
+        .trusted-slider__button-next.swiper-button-next
+        .trusted-slider__button-prev.swiper-button-prev

@@ -1,0 +1,50 @@
+//! Main burger styles 
+
+.burger {
+    display: none;
+
+    // Adaptive changes 
+    @include media('max', 'iPad') {
+    position: absolute;
+    display: block;
+    right: 20px;
+    }
+
+    &__btn {
+    background: content-box;
+    pointer-events: visible;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    padding: 10px;
+    display: flex;
+    border: none;
+    opacity: 1;
+
+    &__event {
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    &:hover span {
+        background-color: $c-light-grey;
+        transition: 0.5s;
+    }
+}
+    }
+
+
+.burger__btn span {
+    background-color: $c-main-gray;
+    display: inline-block;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    width: 22px;
+    height: 2px;
+}
+
+
+.burger span:last-child {
+    margin-bottom: 0;
+}

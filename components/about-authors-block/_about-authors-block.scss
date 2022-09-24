@@ -1,16 +1,27 @@
 .about-authors-block {
   &__inner {
-    flex-direction: column;
     padding-bottom: 140px;
     padding-top: 128px;
-    display: flex;
+    @include flex-col;
+
+     //Adaptive changes
+     @include media('max', 'mobile-horizontal') {
+      padding-bottom: 80px;
+    padding-top: 80px;
+    }
   }
 
   &__books {
     justify-content: space-between;
     padding: 70px 0 0 10px;
-    align-items: center;
-    display: flex;
+    @include flex-row;
+    gap: 10px;
+
+    //Adaptive changes
+    @include media("max", "mobile-pro") {
+      flex-direction: column;
+      padding: 70px 0 0 0;
+    }
   }
 }
 
@@ -19,58 +30,69 @@
   display: flex;
   gap: 30px;
 
+  //Adaptive changes
+  @include media("max", "iPad") {
+    flex-direction: column;
+  }
+
+  @include media("max", "mobile-pro") {
+    flex-direction: row;
+  }
+  @include media("max", "mobile") {
+    flex-direction: column;
+    align-items: center;
+  }
   &__cover {
     max-width: 285px;
     width: 100%;
-   
+
     & img {
-      min-height: 382px; 
-      object-fit: cover;
+      object-fit: contain;
+      min-height: 382px;
       width: 100%;
     }
   }
 
   &__info {
     justify-content: center;
-    flex-direction: column;
-    display: flex;
+    @include flex-col;
+
+    //Adaptive changes
+    @include media("max", "mobile") {
+      align-items: center;
+    }
   }
 
   &__title {
-    letter-spacing: 0.32px;
-    color: $c-main-blue;
-    line-height: 38px;
-    @include f-Cardo;
-    font-size: 32px;
+    @include font-properties(38px, $c-main-blue, 0.32px);
+    @include f-Cardo(32px);
   }
 
   &__price {
-    color: $c-main-yellow;
-    line-height: 33px;
+    @include font-properties(33px, $c-main-yellow);
+    @include f-Inter(21px);
     padding-top: 7px;
-    @include f-Inter;
-    font-size: 21px;
   }
   &__descrip {
-    color: $c-main-gray;
-    line-height: 28px;
+    @include font-properties(28px, $c-main-gray);
+    @include f-Inter(19px);
     padding-top: 17px;
-    @include f-Inter;
-    font-size: 19px;
+
+    //Adaptive changes
+    @include media("max", "mobile") {
+      text-align: center;
+    }
   }
 
   &__type {
     padding-bottom: 27px;
-    align-items: center;
     padding-top: 18px;
-    display: flex;
+    @include flex-row;
     gap: 10px;
 
     &-title {
-      color: $c-main-blue;
-      line-height: 29px;
-      @include f-Cardo;
-      font-size: 24px;
+      @include font-properties(29px, $c-main-blue);
+      @include f-Cardo(24px);
     }
   }
 }

@@ -1,8 +1,7 @@
 %font {
-  color: $c-light-blue-subtext;
-  line-height: 28.5px;
-  @include f-Inter;
-  font-size: 18px;
+  @include font-properties(28.5px, $c-light-blue-subtext);
+  @include f-Inter(18px);
+
 }
 
 %href {
@@ -13,10 +12,10 @@
 .qr-code {
   background: $c-main-blue;
   padding: 15px 20px 16px;
-  align-items: center;
   width: fit-content;
+  @include flex-row;
   margin-top: 54px;
-  display: flex;
+
 
   &__img {
     height: 130px;
@@ -24,16 +23,14 @@
   }
 }
 .contacts {
-  flex-direction: column;
   justify-content: center;
   padding-left: 40px;
-  display: flex;
+  @include flex-col;
+  
 
   &__name {
-    color: $c-main-yellow;
-    line-height: 26.4px;
-    @include f-Cardo;
-    font-size: 22px;
+    @include font-properties(26.4px, $c-main-yellow);
+    @include f-Cardo(22px);
   }
 
   &__email {

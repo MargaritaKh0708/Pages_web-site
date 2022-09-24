@@ -4,15 +4,13 @@
 
   &__inner {
     justify-content: space-between;
-    align-items: center;
-    display: flex;
+    @include flex-row;
   }
 
   &__socials {
     justify-content: space-between;
-      @extend .header__inner;
-      align-items: center;
-      
+    @extend .header__inner;
+    align-items: center;
 
     &-list {
       justify-content: space-between;
@@ -20,6 +18,10 @@
       padding-left: 36px;
       flex: 0 0 50%;
       gap: 10px;
+
+      @include media('max', 'iPad') {
+        display: none;
+        }
     }
   }
 }
@@ -34,6 +36,12 @@
   @extend .header__inner;
   flex: 0 0 55%;
 
+
+    // Adaptive changes 
+    @include media('max', 'iPad') {
+      display: none;
+      }
+
   &__list {
     justify-content: space-between;
     @extend .header__inner;
@@ -41,10 +49,9 @@
   }
 
   &__item {
+    @include f-Inter(17px);
     letter-spacing: 0.17px;
     line-height: 26px;
-    @include f-Inter;
-    font-size: 17px;
 
     &:last-of-type {
       padding-left: 10px;
@@ -64,13 +71,12 @@
 // Social media buttons
 
 .social-btn {
-
   &__header {
-  border: 2px solid $c-white;
-  background: $c-white;
-  height: 45px;
-  width: 45px;}
-  
+    border: 2px solid $c-white;
+    background: $c-white;
+    height: 45px;
+    width: 45px;
+  }
 
   &__footer {
     border: 2px solid $c-main-yellow;
@@ -80,13 +86,11 @@
   }
 }
 
-
-// Cart 
+// Cart
 
 .cart-btn {
-margin-right: 8px;
- flex: 0 0 14.5%;
- width: 17px;
- height: 17x;
+  margin-right: 8px;
+  flex: 0 0 14.5%;
+  width: 17px;
+  height: 17x;
 }
-

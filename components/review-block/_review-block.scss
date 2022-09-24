@@ -1,112 +1,91 @@
+.review-block {
+  &__inner {
+    padding-bottom: 150px;
+    padding-top: 120px;
+    @include flex-row;
+    gap: 30px;
+  }
 
-.review-block  {
+  &__content {
+    @include flex-col;
+  }
 
-    &__inner {
-        padding-bottom: 150px;  
-        align-items: center;
-        padding-top: 120px;
-        display: flex;
-        gap: 30px;
+  &__text {
+    @include font-properties(34px, $c-main-gray);
+    @include f-Inter(19px);
+    padding-top: 34px;
+    width: 90%;
+  }
+
+  &__rating {
+    @include flex-row;
+    align-items: flex-end;
+    padding-top: 22px;
+    gap: 10px;
+
+    & span {
+      @include font-properties(26px, $c-main-blue);
+      @include f-Cardo(22px);
     }
 
-    &__content  {
-        flex-direction: column;
-        display: flex;
+    &-title {
+      @include description;
+      color: $c-main-blue;
+      padding-top: 10px;
     }
+  }
 
-    &__text {
-        color: $c-main-gray;
-        padding-top: 34px;
-        line-height: 34px;
-        @include f-Inter;
-        font-size: 19px;
-        width: 90%;
-    }
-
-    &__rating {
-        align-items: flex-end;
-        padding-top: 22px;
-        display: flex;
-        gap: 10px;
-
-
-        & span { color: $c-main-blue;
-            line-height: 26px;
-            @include f-Cardo;
-            font-size: 22px;
-        }
-
-        &-title {
-        @include description;
-        color: $c-main-blue;
-        padding-top: 10px;
-        }
-    }
-    
-    &__reviews {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        flex: 0 0 60.5%;
-        display: flex;
-        height: 634px;
-        gap: 20px;
-    }
+  &__reviews {
+    justify-content: center;
+    align-items: center;
+    @include flex-col;
+    flex-wrap: wrap;
+    flex: 0 0 60.5%;
+    height: 634px;
+    gap: 20px;
+  }
 }
-
 
 .review-item {
-    @include box-shadow(3px,rgba(0, 0, 0, 0.11));
-    padding: 24px 35px 24px;
-    background: $c-main-blue;
-    flex-direction: column;
-    width: fit-content;
-    max-width: 381px;
-    display: flex;
-    height: 292px;
+  @include box-shadow(3px, #0000001c);
+  padding: 24px 35px 24px;
+  background: $c-main-blue;
+  width: fit-content;
+  @include flex-col;
+  max-width: 381px;
+  height: 292px;
 
-    &__user {
-        align-items: center;
-        display: flex;
+  &__user {
+    @include flex-row;
 
-        &-icon {
-            border-radius: 100px;
-            height: 85px;
-            width: 85px;
-        }
-
-        &-info {
-            flex-direction: column;
-            padding-left: 20px;
-            color: $c-white;
-            display: flex;
-        }
-
-        &-name {
-            padding-bottom: 10px;
-            line-height: 29px;
-            @include f-Cardo;
-            font-size: 24px;
-        }
-
-    }
-    &__title {
-        padding-top: 20px;
-        line-height: 33px;
-        @include f-Cardo;
-        color: $c-white;
-        font-size: 22px;
+    &-icon {
+      border-radius: 100px;
+      height: 85px;
+      width: 85px;
     }
 
-    &__text {
-        color: $c-light-blue-subtext;
-        padding-top: 13px;
-        line-height: 29px;
-        @include f-Inter;
-        font-size: 18px;
-        width: 94.5%;
+    &-info {
+      padding-left: 20px;
+      @include flex-col;
+      color: $c-white;
     }
 
+    &-name {
+      @include f-Cardo(24px);
+      padding-bottom: 10px;
+      line-height: 29px;
+    }
+  }
+  &__title {
+    @include font-properties(33px, $c-white);
+    @include f-Cardo(22px);
+    padding-top: 20px;
+  }
+
+  &__text {
+    @include font-properties(29px, $c-light-blue-subtext);
+    padding-top: 13px;
+    @include f-Inter;
+    width: 94.5%;
+  }
 }
-

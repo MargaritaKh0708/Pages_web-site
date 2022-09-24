@@ -1,0 +1,19 @@
+include ./learn-item
+
+mixin learn-slider 
+    .learn-slider.swiper
+        .learn-slider__slider-list.swiper-wrapper 
+            .learn-slider__slide.swiper-slide
+                .learn-slider__card
+                    +learn-item('01','Use HDFS & Map Reduce for storing & analyzing data at scale.')
+            .learn-slider__slide.swiper-slide
+                .learn-slider__card
+                    +learn-item('02','Consume streaming data using Spark Streaming, Flink, and Storm.')
+            .learn-slider__slide.swiper-slide
+                .learn-slider__card
+                    +learn-item('03','Choose an appropriate data storage technology for your application')
+            .learn-slider__slide.swiper-slide
+                .learn-slider__card
+                    +learn-item('04','Analyze non-relational data using HBase, Cassandra, and MongoDB.')
+        .learn-slider__button-next.swiper-button-next
+        .learn-slider__button-prev.swiper-button-prev

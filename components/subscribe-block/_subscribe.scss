@@ -7,15 +7,14 @@
   }
 
   &__content {
-    @include box-shadow(19px, rgba(0, 0, 0, 0.18));
+    @include box-shadow(19px, #0000002e);
     padding: 100px 150px 115px;
     background: $c-main-yellow;
-    flex-direction: column;
+    border-radius: $radius-5;
     justify-content: center;
     align-items: center;
     color: $c-main-blue;
-    border-radius: 5px;
-    display: flex;
+    @include flex-col;
   }
 
   &__subtitle {
@@ -23,7 +22,6 @@
     text-align: center;
     line-height: 28px;
     @include f-Inter;
-    font-size: 18px;
   }
 }
 
@@ -31,9 +29,8 @@
 
 .subscribe-form {
   justify-content: space-between;
-  align-items: center;
   padding-top: 50px;
-  display: flex;
+  @include flex-row;
   height: 70px;
   width: 100%;
   gap: 16px;
@@ -49,20 +46,17 @@
     border: none;
 
     &::placeholder {
-      color: $c-light-blue-subtext;
-      letter-spacing: 0.18px;
-      line-height: 31px;
+      @include font-properties(31px, $c-light-blue-subtext, 0.18px);
       @include f-Inter;
     }
   }
 
   &__btn {
+    @include font-properties(31px, $c-white, 0.18px);
     background: $c-main-blue;
     padding: 19px 120px 18px;
-    letter-spacing: 0.18px;
     text-align: center;
-    line-height: 31px;
     @include f-Inter;
-    color: $c-white;
+
   }
 }

@@ -1,18 +1,24 @@
-//! Mixins
+//* Mixins
 
 
-//? Fonts
+// Fonts
 
-@mixin f-Inter {
+@mixin f-Inter($font-size:18px) {
     font-family: 'Inter', sans-serif;
+    font-size: $font-size;
     font-weight: 400;
-    font-size: 18px;
 }
 
-@mixin f-Cardo {
+@mixin f-Cardo($font-size:18px) {
     font-family: 'Cardo', serif;
+    font-size: $font-size;
     font-weight: 400;
-    font-size: 18px;
+}
+
+@mixin font-properties ($line-height, $color:$c-white, $letter-spacing:0) {
+    letter-spacing:  $letter-spacing;
+    line-height: $line-height;
+    color: $color;
 }
 
 // Shadow
@@ -30,16 +36,27 @@
 }
 
 
+// Flex
+
+@mixin flex-col {
+    flex-direction: column;
+    display: flex;
+}
+
+@mixin flex-row {
+    align-items: center;
+    display: flex;
+}
+
 // Window sizes map
 
 $sizes: (
     'mobile':375px,
+    'mobile-pro': 600px,
     'mobile-horizontal':812px,
     'iPad':1024px,
     'hd':1280px,
-    'iPad-horizontal':1366px,
-    'fullHd':1920px,
-    '2K':2560px
+    'iPad-horizontal':1366px
 );
 
 // Media
