@@ -4,6 +4,12 @@
   &__inner {
     padding-bottom: 120px;
     padding-top: 120px;
+
+    // Adaptive 
+    @include media ('max', 'iPad') {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
   }
 
   &__content {
@@ -15,6 +21,11 @@
     align-items: center;
     color: $c-main-blue;
     @include flex-col;
+
+    // Adaptive 
+    @include media ('max', 'iPad') {
+      padding: 50px 20px 90px;
+    }
   }
 
   &__subtitle {
@@ -29,14 +40,19 @@
 
 .subscribe-form {
   justify-content: space-between;
-  padding-top: 50px;
+  margin-top: 50px;
   @include flex-row;
   height: 70px;
   width: 100%;
   gap: 16px;
 
-  &__label, &__input {
-    height: 70px;
+  // Adaptive
+  @include media ('max', 'mobile-horizontal') {
+    @include flex-col;
+  }
+
+  &__label, &__input, &__btn  {
+    height: 100%;
     width: 100%;
   }
 
@@ -44,6 +60,11 @@
     padding: 19px 39px 20px;
     outline: none;
     border: none;
+
+    //Adaptive
+    @include media ('max', 'iPad') {
+      padding: 15px 30px;
+    }
 
     &::placeholder {
       @include font-properties(31px, $c-light-blue-subtext, 0.18px);
@@ -57,6 +78,11 @@
     padding: 19px 120px 18px;
     text-align: center;
     @include f-Inter;
+
+    // Adaptive
+    @include media('max', 'iPad') {
+      padding: 15px 40px;
+    }
 
   }
 }

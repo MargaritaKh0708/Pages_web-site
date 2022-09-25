@@ -35,11 +35,11 @@ let articleSlider = new Swiper('.article-slider', {
 
     breakpoints: {
         // when window width is >= 320px
-        320: {
+       0: {
             slidesPerView: 1,
         },
         // when window width is >= 700px
-        700: {
+        600: {
             slidesPerView: 2,
         },
         // when window width is >= 1000px
@@ -88,32 +88,11 @@ let trustedSlider = new Swiper('.trusted-slider', {
 
 // //* Vision-block Slider 
 
-// let visionSlider = new Swiper('.vision-slider', {
-//     slidesPerView: 1,
-//     spaceBetween: 20,
-//     grabCursor: true,
-
-//     // Keyboard navigation 
-//     keyboard: {
-//         enable: true,
-//         onlyInViewport: true,
-//         pageUpDown: true
-//     },
-
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     }
-// })
-
-
-//* Learn-block Slider 
-
-let learnSlider = new Swiper('.learn-slider', {
-    direction: 'vertical',
+let visionSlider = new Swiper('.vision-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
     grabCursor: true,
+    centeredSlides: true,
 
     // Keyboard navigation 
     keyboard: {
@@ -127,3 +106,5 @@ let learnSlider = new Swiper('.learn-slider', {
         prevEl: '.swiper-button-prev',
     }
 })
+
+

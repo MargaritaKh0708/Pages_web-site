@@ -4,10 +4,22 @@
     padding-top: 120px;
     @include flex-row;
     gap: 30px;
+
+    //Adaptive
+    @include media("max", "mobile-horizontal") {
+      flex-direction: column;
+      padding-bottom: 80px;
+      padding-top: 80px;
+    }
   }
 
   &__content {
     @include flex-col;
+
+    //Adaptive
+    @include media("max", "iPad-horizontal") {
+      align-items: center;
+    }
   }
 
   &__text {
@@ -43,6 +55,11 @@
     flex: 0 0 60.5%;
     height: 634px;
     gap: 20px;
+
+    //Adaptive
+    @include media("max", "iPad-horizontal") {
+      height: auto;
+    }
   }
 }
 
@@ -54,6 +71,12 @@
   @include flex-col;
   max-width: 381px;
   height: 292px;
+
+  
+    //Adaptive
+    @include media("max", "mobile-pro") {
+      height: auto;
+    }
 
   &__user {
     @include flex-row;

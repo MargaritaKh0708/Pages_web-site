@@ -9,13 +9,16 @@
 
   &__content {
     justify-content: space-between;
+		flex-wrap: wrap;
     display: flex;
+		gap: 28px;
   }
 
   &__socials-list {
     @include flex-row;
     margin-top: 20px;
     gap: 10px;
+
   }
 
   &__sub-content {

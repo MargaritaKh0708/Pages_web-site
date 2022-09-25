@@ -48,16 +48,7 @@
     display: flex;
 }
 
-// Window sizes map
 
-$sizes: (
-    'mobile':375px,
-    'mobile-pro': 600px,
-    'mobile-horizontal':812px,
-    'iPad':1024px,
-    'hd':1280px,
-    'iPad-horizontal':1366px
-);
 
 // Media
 @function getPreviousSize($currentSize) {

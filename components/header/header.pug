@@ -1,6 +1,7 @@
-include ./social-btn
+include ../../elements/social-btn/social-btn
 include ../../elements/buy-btn/buy-btn
 include ../../elements/burger/burger
+
 
 mixin header 
     header.header
@@ -9,9 +10,9 @@ mixin header
                 .logo 
                     img(src='./assets/images/icons/logo.svg' alt='pages')
                 .header__socials-list
-                    +social-btn('./assets/images/icons/facebook.svg')(class='social-btn__header')
-                    +social-btn('./assets/images/icons/twitter.svg')(class='social-btn__header')
-                    +social-btn('./assets/images/icons/link.svg')(class='social-btn__header')
+                    +social-btn('facebook','https://uk-ua.facebook.com/')(class='social-btn__header' target='_blank' rel='noreferrer')
+                    +social-btn('twitter','https://twitter.com/?lang=ru')(class='social-btn__header' target='_blank' rel='noreferrer')
+                    +social-btn('link','https://www.linkedin.com/home/?originalSubdomain=ua')(class='social-btn__header' target='_blank' rel='noreferrer')
             nav.navigation
                 ul.navigation__list
                     li.navigation__item

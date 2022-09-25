@@ -24,6 +24,10 @@
     font-weight: 400;
     font-size: 44px;
 
+    @include media('max', 'mobile-horizontal') {
+      font-size: 30px;
+    }
+
     &--color {
       letter-spacing: 2px;
       color: $c-white;

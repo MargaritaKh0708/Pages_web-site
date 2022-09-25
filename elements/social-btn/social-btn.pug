@@ -1,7 +1,8 @@
 include ../../elements/svg-switch/svg-switch
 
-mixin social-btn (icon) 
+mixin social-btn (icon, href) 
     button&attributes(attributes)
-        +svg-switch(icon)
+        a(href=href) 
+            +svg-switch(icon)
         
     

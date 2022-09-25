@@ -51,4 +51,10 @@
     margin-top: 30px;
     display: block;
   }
+
+  & .swiper-button-next::after,
+  & .swiper-button-prev::after{
+    color: $c-main-blue;
+    font-size: 30px;
+  }
 }

@@ -9,9 +9,22 @@ $c-light-grey: #F6F8FC; // header font & About the Author block bg
 $c-main-blue: #1B3764;
 $c-main-gray: #969AA0; // text color
 $c-white: #fff;
+$c-black: #111;
 
 
 // Border - radius
 
 $radius-100: 100px;
 $radius-5: 5px;
+
+
+// Window sizes map
+
+$sizes: (
+    'mobile':375px,
+    'mobile-pro': 600px,
+    'mobile-horizontal':812px,
+    'iPad':1024px,
+    'hd':1280px,
+    'iPad-horizontal':1366px
+);

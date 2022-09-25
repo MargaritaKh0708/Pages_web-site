@@ -1,82 +1,63 @@
 .learn-block {
-
   &__inner {
-      padding-bottom: 148px;
-        padding-top: 140px;
-    }
+    padding-bottom: 148px;
+    padding-top: 140px;
+  }
 
-    &__content  {
-      padding-top: 80px;
-      @include flex-row;
-    }
+  &__content {
+    padding-top: 80px;
+    @include flex-row;
 
-    &__items {
-      flex-wrap: wrap;
-      display: flex;
-      flex: 0 0 56%;
-      gap: 30px;
+    // Adaptive changes
 
-      @include media('max', 'hd') {
-        display: none;
-       }
+    @include media("max", "mobile-pro") {
+      display: block;
     }
+  }
+
+  &__items {
+    flex-wrap: wrap;
+    display: flex;
+    flex: 0 0 56%;
+    gap: 30px;
+
+    @include media("max", "hd") {
+      position: relative;
+      display: block;
+      z-index: 3;
+    }
+  }
 }
-
 
 .learn-item {
-    padding: 30px 45px 27px 30px;
-    background: $c-light-blue-bg;
-    flex-direction: column;
-    color: $c-main-blue;
-    @include f-Cardo;
-    flex: 0 0 42.65%;
-    display: flex;
-    width: 303px;
+  padding: 30px 45px 27px 30px;
+  background: $c-light-blue-bg;
+  flex-direction: column;
+  color: $c-main-blue;
+  @include f-Cardo;
+  flex: 0 0 42.65%;
+  display: flex;
+  width: 303px;
 
-    @include media('max', 'hd') {
-      margin: 0 auto;
-     }
-    
-
-    &__count{
-        position: relative;
-    }
-
-    &__number {
-      transform: translate(55%, -140%);
-        position: absolute;
-        line-height: 29px;
-        font-size: 23px;
-    }
-
-    &__text {
-      padding-top: 30px;
-      line-height: 34px;
-      font-size: 24px;
-      width: 90%;
-    }
-}
-
-
-//slider 
-
-.learn-slider {
-  display: none;
-
-  @include media('max', 'hd') {
-   display: block;
-   flex: 0 0 50%;
+  @include media("max", "hd") {
+    margin: 10px auto;
   }
 
-  & .swiper-button-next::after,
-  & .swiper-button-prev::after {
-    font-size: 20px;
-  }
-  &__button-next {
-    right: 50px;
+  &__count {
+    position: relative;
   }
 
-  &__button-prev{
-    left: 50px;
+  &__number {
+    transform: translate(55%, -140%);
+    position: absolute;
+    line-height: 29px;
+    font-size: 23px;
+  }
+
+  &__text {
+    padding-top: 30px;
+    line-height: 34px;
+    font-size: 24px;
+    width: 90%;
   }
 }

@@ -6,11 +6,21 @@
         padding-bottom: 60px;
         padding-top: 74px;
         @include flex-row;
+
+         //Adaptive changes
+        @include media('max', 'mobile-pro') {
+            display: block;
+        }
     }
 
     &__content {
         @include flex-col;
         gap: 27px;
+
+         //Adaptive changes
+        @include media('max', 'mobile-pro') {
+            align-items: center;
+        }
     }
 
     &__description {
@@ -25,6 +35,15 @@
         & img{
         object-fit: contain;
         max-width: 560px;
+
+        //Adaptive changes
+        @include media('max', 'iPad') {
+            width: 100%;
+        }
+
+        @include media('max', 'mobile-pro') {
+            display: none;
+        }
     }
     }
     

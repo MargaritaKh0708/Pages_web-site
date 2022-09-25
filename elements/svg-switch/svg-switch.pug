@@ -1,0 +1,16 @@
+include ./facebook
+include ./twitter
+include ./insta
+include ./link
+
+
+mixin svg-switch(svgName)
+    case svgName 
+        when 'facebook'
+            +facebook 
+        when 'twitter'
+            +twitter
+        when 'link'
+            +link
+        default 
+            +insta

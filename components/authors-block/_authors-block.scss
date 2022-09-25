@@ -40,6 +40,11 @@
   padding-top: 42px;
   @include flex-row;
 
+  //Adaptive 
+  @include media ('max','mobile-pro') {
+    align-items: flex-start;
+  }
+
   &__item {
     border-left: 1px solid $c-main-yellow;
     padding-left: 37px;

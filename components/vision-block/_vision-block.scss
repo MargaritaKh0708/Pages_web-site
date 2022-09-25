@@ -11,6 +11,10 @@
     padding-top: 70px;
     flex-wrap: wrap;
     display: flex;
+
+    @include media("max", "hd") {
+      display: none;
+    }
   }
 
   &__footer {
@@ -23,10 +27,10 @@
     font-size: 18px;
   }
 
-  &__chapter-descrip, &__contacts span {
+  &__chapter-descrip,
+  &__contacts span {
     padding-top: 34px;
     color: $c-main-gray;
-    
   }
   &__contacts {
     color: $c-main-blue;
@@ -39,13 +43,17 @@
   margin-right: 30px;
   flex: 0 0 48.5%;
 
+  @include media("max", "hd") {
+    margin: 0 auto;
+  }
+
   &:nth-of-type(2n) {
     padding-left: 52px;
     margin-right: 0;
   }
 
   &:nth-of-type(3),
-  &:nth-of-type(4)  {
+  &:nth-of-type(4) {
     margin-top: 40px;
   }
 
@@ -59,23 +67,26 @@
     @include description;
     padding-top: 22px;
   }
-;
   &__features {
     @include flex-row;
     padding-top: 5px;
+
+    @include media("max", "mobile-pro") {
+      flex-wrap: wrap;
+    }
   }
 
   &__feature {
     @extend .vision-item__features;
 
     &-name {
-      @include font-properties(31px,  $c-main-blue);
+      @include font-properties(31px, $c-main-blue);
       @include f-Cardo(22px);
       padding-left: 10px;
     }
 
     &-value {
-      @include font-properties(27px,  $c-main-gray);
+      @include font-properties(27px, $c-main-gray);
       @include f-Inter(17px);
       padding-left: 15px;
       align-self: end;
@@ -83,10 +94,13 @@
 
     &:last-of-type {
       padding-left: 52px;
+
+      @include media("max", "mobile-pro") {
+        padding: 0;
+      }
     }
   }
 }
-
 
 .trail-btn {
   background: $c-main-yellow;
@@ -99,10 +113,23 @@
   @include description;
 }
 
-// .vision-slider {
-//   display: none;
+// Slider
 
-//   @include media('max', 'hd') {
-//    display: block;
-//   }
-// }
+.vision-slider {
+  display: none;
+
+  @include media("max", "hd") {
+    margin-top: 20px;
+    display: block;
+  }
+
+  &__card {
+    padding: 0 20px;
+  }
+
+  & .swiper-button-next::after,
+  & .swiper-button-prev::after{
+    color: $c-main-yellow;
+    font-size: 30px;
+  }
+}

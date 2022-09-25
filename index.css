@@ -119,19 +119,6 @@ button {
   color: #FFCA42;
 }
 
-.social-btn__header {
-  border: 2px solid #fff;
-  background: #fff;
-  height: 45px;
-  width: 45px;
-}
-.social-btn__footer {
-  border: 2px solid #FFCA42;
-  background: none;
-  height: 55px;
-  width: 55px;
-}
-
 .cart-btn {
   margin-right: 8px;
   flex: 0 0 14.5%;
@@ -407,6 +394,11 @@ button {
   font-weight: 400;
   font-size: 44px;
 }
+@media only screen and (max-width: 812px) {
+  .block-title__text {
+    font-size: 30px;
+  }
+}
 .block-title__text--color {
   letter-spacing: 2px;
   color: #fff;
@@ -561,6 +553,12 @@ button {
   display: flex;
   margin-top: 54px;
 }
+@media only screen and (max-width: 600px) {
+  .qr-code {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
 .qr-code__img {
   height: 130px;
   width: 130px;
@@ -571,6 +569,11 @@ button {
   padding-left: 40px;
   flex-direction: column;
   display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .contacts {
+    padding-left: 0;
+  }
 }
 .contacts__name {
   letter-spacing: 0;
@@ -629,6 +632,11 @@ button {
   padding-top: 42px;
   align-items: center;
   display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .rewards-list {
+    align-items: flex-start;
+  }
 }
 .rewards-list__item {
   border-left: 1px solid #FFCA42;
@@ -752,6 +760,10 @@ button {
     display: block;
   }
 }
+.trusted-slider .swiper-button-next::after, .trusted-slider .swiper-button-prev::after {
+  color: #1B3764;
+  font-size: 30px;
+}
 
 .get-book-block {
   background: #1B3764;
@@ -763,10 +775,20 @@ button {
   align-items: center;
   display: flex;
 }
+@media only screen and (max-width: 600px) {
+  .get-book-block__inner {
+    display: block;
+  }
+}
 .get-book-block__content {
   flex-direction: column;
   display: flex;
   gap: 27px;
+}
+@media only screen and (max-width: 600px) {
+  .get-book-block__content {
+    align-items: center;
+  }
 }
 .get-book-block__description {
   color: #B4C7E7;
@@ -785,6 +807,16 @@ button {
      object-fit: contain;
   max-width: 560px;
 }
+@media only screen and (max-width: 1024px) {
+  .get-book-block__cover img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .get-book-block__cover img {
+    display: none;
+  }
+}
 
 .learn-block__inner {
   padding-bottom: 148px;
@@ -795,6 +827,11 @@ button {
   align-items: center;
   display: flex;
 }
+@media only screen and (max-width: 600px) {
+  .learn-block__content {
+    display: block;
+  }
+}
 .learn-block__items {
   flex-wrap: wrap;
   display: flex;
@@ -803,7 +840,9 @@ button {
 }
 @media only screen and (max-width: 1280px) {
   .learn-block__items {
-    display: none;
+    position: relative;
+    display: block;
+    z-index: 3;
   }
 }
 
@@ -821,7 +860,7 @@ button {
 }
 @media only screen and (max-width: 1280px) {
   .learn-item {
-    margin: 0 auto;
+    margin: 10px auto;
   }
 }
 .learn-item__count {
@@ -840,25 +879,6 @@ button {
   width: 90%;
 }
 
-.learn-slider {
-  display: none;
-}
-@media only screen and (max-width: 1280px) {
-  .learn-slider {
-    display: block;
-    flex: 0 0 50%;
-  }
-}
-.learn-slider .swiper-button-next::after, .learn-slider .swiper-button-prev::after {
-  font-size: 20px;
-}
-.learn-slider__button-next {
-  right: 50px;
-}
-.learn-slider__button-prev {
-  left: 50px;
-}
-
 .vision-block {
   background: #F4F8FF;
 }
@@ -871,6 +891,11 @@ button {
   padding-top: 70px;
   flex-wrap: wrap;
   display: flex;
+}
+@media only screen and (max-width: 1280px) {
+  .vision-block__chapter-list {
+    display: none;
+  }
 }
 .vision-block__footer {
   justify-content: center;
@@ -899,6 +924,11 @@ button {
   background: #fff;
   margin-right: 30px;
   flex: 0 0 48.5%;
+}
+@media only screen and (max-width: 1280px) {
+  .vision-item {
+    margin: 0 auto;
+  }
 }
 .vision-item:nth-of-type(2n) {
   padding-left: 52px;
@@ -931,6 +961,11 @@ button {
   display: flex;
   padding-top: 5px;
 }
+@media only screen and (max-width: 600px) {
+  .vision-item__features, .vision-item__feature {
+    flex-wrap: wrap;
+  }
+}
 .vision-item__feature-name {
   letter-spacing: 0;
   line-height: 31px;
@@ -953,6 +988,11 @@ button {
 .vision-item__feature:last-of-type {
   padding-left: 52px;
 }
+@media only screen and (max-width: 600px) {
+  .vision-item__feature:last-of-type {
+    padding: 0;
+  }
+}
 
 .trail-btn {
   background: #FFCA42;
@@ -971,6 +1011,23 @@ button {
   font-size: 19px;
 }
 
+.vision-slider {
+  display: none;
+}
+@media only screen and (max-width: 1280px) {
+  .vision-slider {
+    margin-top: 20px;
+    display: block;
+  }
+}
+.vision-slider__card {
+  padding: 0 20px;
+}
+.vision-slider .swiper-button-next::after, .vision-slider .swiper-button-prev::after {
+  color: #FFCA42;
+  font-size: 30px;
+}
+
 .review-block__inner {
   padding-bottom: 150px;
   padding-top: 120px;
@@ -978,9 +1035,21 @@ button {
   display: flex;
   gap: 30px;
 }
+@media only screen and (max-width: 812px) {
+  .review-block__inner {
+    flex-direction: column;
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
 .review-block__content {
   flex-direction: column;
   display: flex;
+}
+@media only screen and (max-width: 1366px) {
+  .review-block__content {
+    align-items: center;
+  }
 }
 .review-block__text {
   letter-spacing: 0;
@@ -1026,6 +1095,11 @@ button {
   height: 634px;
   gap: 20px;
 }
+@media only screen and (max-width: 1366px) {
+  .review-block__reviews {
+    height: auto;
+  }
+}
 
 .review-item {
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1098039216);
@@ -1038,6 +1112,11 @@ button {
   display: flex;
   max-width: 381px;
   height: 292px;
+}
+@media only screen and (max-width: 600px) {
+  .review-item {
+    height: auto;
+  }
 }
 .review-item__user {
   align-items: center;
@@ -1090,6 +1169,12 @@ button {
   padding-bottom: 120px;
   padding-top: 120px;
 }
+@media only screen and (max-width: 1024px) {
+  .subscribe-block__inner {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
 .subscribe-block__content {
   box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1803921569);
   padding: 100px 150px 115px;
@@ -1100,6 +1185,11 @@ button {
   color: #1B3764;
   flex-direction: column;
   display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .subscribe-block__content {
+    padding: 50px 20px 90px;
+  }
 }
 .subscribe-block__subtitle {
   padding-top: 25px;
@@ -1112,21 +1202,32 @@ button {
 
 .subscribe-form {
   justify-content: space-between;
-  padding-top: 50px;
+  margin-top: 50px;
   align-items: center;
   display: flex;
   height: 70px;
   width: 100%;
   gap: 16px;
 }
-.subscribe-form__label, .subscribe-form__input {
-  height: 70px;
+@media only screen and (max-width: 812px) {
+  .subscribe-form {
+    flex-direction: column;
+    display: flex;
+  }
+}
+.subscribe-form__label, .subscribe-form__input, .subscribe-form__btn {
+  height: 100%;
   width: 100%;
 }
 .subscribe-form__input {
   padding: 19px 39px 20px;
   outline: none;
   border: none;
+}
+@media only screen and (max-width: 1024px) {
+  .subscribe-form__input {
+    padding: 15px 30px;
+  }
 }
 .subscribe-form__input::-moz-placeholder {
   letter-spacing: 0.18px;
@@ -1163,6 +1264,11 @@ button {
   font-size: 18px;
   font-weight: 400;
 }
+@media only screen and (max-width: 1024px) {
+  .subscribe-form__btn {
+    padding: 15px 40px;
+  }
+}
 
 .article-block {
   background: #F4F8FF;
@@ -1170,6 +1276,12 @@ button {
 .article-block__inner {
   padding-bottom: 140px;
   padding-top: 126px;
+}
+@media only screen and (max-width: 812px) {
+  .article-block__inner {
+    padding-bottom: 80px;
+    padding-top: 50px;
+  }
 }
 
 .article-card, .article-card__descrip {
@@ -1180,6 +1292,9 @@ button {
 }
 .article-card__cover {
   flex: 0 0 56%;
+}
+.article-card__cover img {
+  width: 100%;
 }
 .article-card__descrip {
   background: #fff;
@@ -1245,6 +1360,25 @@ button {
   width: 50px;
 }
 
+.social-btn__header {
+  border: 2px solid #fff;
+  background: #fff;
+  height: 45px;
+  width: 45px;
+}
+.social-btn__header path {
+  fill: #111;
+}
+.social-btn__footer {
+  border: 2px solid #FFCA42;
+  background: none;
+  height: 55px;
+  width: 55px;
+}
+.social-btn__footer path {
+  fill: #fff;
+}
+
 .footer {
   background: #1B3764;
 }
@@ -1256,7 +1390,9 @@ button {
 }
 .footer__content {
   justify-content: space-between;
+  flex-wrap: wrap;
   display: flex;
+  gap: 28px;
 }
 .footer__socials-list {
   align-items: center;
