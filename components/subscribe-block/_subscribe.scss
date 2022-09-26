@@ -1,12 +1,10 @@
 .subscribe-block {
-  
-
   &__inner {
     padding-bottom: 120px;
     padding-top: 120px;
 
-    // Adaptive 
-    @include media ('max', 'iPad') {
+    // Adaptive
+    @include media('max', 'iPad') {
       padding-bottom: 50px;
       padding-top: 50px;
     }
@@ -22,8 +20,8 @@
     color: $c-main-blue;
     @include flex-col;
 
-    // Adaptive 
-    @include media ('max', 'iPad') {
+    // Adaptive
+    @include media('max', 'iPad') {
       padding: 50px 20px 90px;
     }
   }
@@ -47,11 +45,12 @@
   gap: 16px;
 
   // Adaptive
-  @include media ('max', 'mobile-horizontal') {
+  @include media('max', 'mobile-horizontal') {
     @include flex-col;
   }
 
-  &__label, &__input, &__btn  {
+  &__label,
+  &__input {
     height: 100%;
     width: 100%;
   }
@@ -62,7 +61,7 @@
     border: none;
 
     //Adaptive
-    @include media ('max', 'iPad') {
+    @include media('max', 'iPad') {
       padding: 15px 30px;
     }
 
@@ -82,7 +81,8 @@
     // Adaptive
     @include media('max', 'iPad') {
       padding: 15px 40px;
+      height: 100%;
+      width: 100%;
     }
-
   }
 }

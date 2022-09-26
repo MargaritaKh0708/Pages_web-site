@@ -1,3 +1,4 @@
+include components/head-content/head-content
 include components/header/header
 include components/presentation-block/presentation-block
 include components/about-authors-block/about-authors-block
@@ -15,14 +16,8 @@ include components/footer/footer
 doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css")
-        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
-        script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
-        link(rel="stylesheet", href="index.css")
-        title Document
+        +head-content
+        title=Pages
     body
         .app
             +header

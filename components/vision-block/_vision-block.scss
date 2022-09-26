@@ -4,6 +4,7 @@
   &__inner {
     padding-bottom: 130px;
     padding-top: 118px;
+    position: relative;
   }
 
   &__chapter-list {
@@ -12,7 +13,7 @@
     flex-wrap: wrap;
     display: flex;
 
-    @include media("max", "hd") {
+    @include media('max', 'hd') {
       display: none;
     }
   }
@@ -35,6 +36,23 @@
   &__contacts {
     color: $c-main-blue;
   }
+
+  & .swiper-button-next::after,
+  & .swiper-button-prev::after {
+    color: $c-main-yellow;
+    font-size: 30px;
+  }
+
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    display: none;
+    top: 40%;
+
+    //ADAPTIVE
+    @include media('max', 'hd') {
+      display: block;
+    }
+  }
 }
 
 .vision-item {
@@ -43,7 +61,8 @@
   margin-right: 30px;
   flex: 0 0 48.5%;
 
-  @include media("max", "hd") {
+  //ADAPTIVE
+  @include media('max', 'hd') {
     margin: 0 auto;
   }
 
@@ -66,12 +85,14 @@
     @include font-properties(32px, $c-main-gray);
     @include description;
     padding-top: 22px;
+    width: 90%;
   }
   &__features {
     @include flex-row;
     padding-top: 5px;
 
-    @include media("max", "mobile-pro") {
+    //ADAPTIVE
+    @include media('max', 'mobile-pro') {
       flex-wrap: wrap;
     }
   }
@@ -95,7 +116,8 @@
     &:last-of-type {
       padding-left: 52px;
 
-      @include media("max", "mobile-pro") {
+      //ADAPTIVE
+      @include media('max', 'mobile-pro') {
         padding: 0;
       }
     }
@@ -118,18 +140,13 @@
 .vision-slider {
   display: none;
 
-  @include media("max", "hd") {
+  //ADAPTIVE
+  @include media('max', 'hd') {
     margin-top: 20px;
     display: block;
   }
 
   &__card {
     padding: 0 20px;
-  }
-
-  & .swiper-button-next::after,
-  & .swiper-button-prev::after{
-    color: $c-main-yellow;
-    font-size: 30px;
   }
 }

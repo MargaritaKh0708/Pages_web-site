@@ -1,6 +1,11 @@
 .header {
   background: $c-main-blue;
-  padding: 22px 0 21px 0;
+  padding: 20px 0 21px 0;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
 
   &__inner {
     justify-content: space-between;
@@ -21,7 +26,7 @@
 
       @include media('max', 'iPad') {
         display: none;
-        }
+      }
     }
   }
 }
@@ -34,13 +39,12 @@
 .navigation {
   justify-content: space-between;
   @extend .header__inner;
-  flex: 0 0 55%;
+  flex: 0 0 57%;
 
-
-    // Adaptive changes 
-    @include media('max', 'iPad') {
-      display: none;
-      }
+  // Adaptive changes
+  @include media('max', 'iPad') {
+    display: none;
+  }
 
   &__list {
     justify-content: space-between;
@@ -67,7 +71,6 @@
     }
   }
 }
-
 
 // Cart
 

@@ -1,51 +1,49 @@
 .get-book-block {
-    background: $c-main-blue;
+  background: $c-main-blue;
 
-    &__inner {
-        justify-content: space-between;
-        padding-bottom: 60px;
-        padding-top: 74px;
-        @include flex-row;
+  &__inner {
+    justify-content: space-between;
+    padding-bottom: 60px;
+    padding-top: 74px;
+    @include flex-row;
 
-         //Adaptive changes
-        @include media('max', 'mobile-pro') {
-            display: block;
-        }
+    //Adaptive changes
+    @include media('max', 'mobile-pro') {
+      display: block;
     }
+  }
 
-    &__content {
-        @include flex-col;
-        gap: 27px;
+  &__content {
+    @include flex-col;
+    gap: 27px;
 
-         //Adaptive changes
-        @include media('max', 'mobile-pro') {
-            align-items: center;
-        }
+    //Adaptive changes
+    @include media('max', 'mobile-pro') {
+      align-items: center;
     }
+  }
 
-    &__description {
-        color: $c-light-blue-subtext;
-        @include description;
-        max-width: 74%;
+  &__description {
+    color: $c-light-blue-subtext;
+    @include description;
+    max-width: 74%;
+  }
+
+  &__cover {
+    align-self: center;
+
+    & img {
+      object-fit: contain;
+      max-width: 560px;
+
+      //Adaptive changes
+      @include media('max', 'iPad') {
+        width: 100%;
+      }
+
+      @include media('max', 'mobile-pro') {
+        display: none;
+      }
     }
-
-    &__cover {
-        align-self: center;
-
-        & img{
-        object-fit: contain;
-        max-width: 560px;
-
-        //Adaptive changes
-        @include media('max', 'iPad') {
-            width: 100%;
-        }
-
-        @include media('max', 'mobile-pro') {
-            display: none;
-        }
-    }
-    }
-    
-    
+  }
 }

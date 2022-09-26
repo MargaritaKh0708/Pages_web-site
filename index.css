@@ -21,10 +21,6 @@ body {
   min-height: 100vh;
 }
 
-.app {
-  overflow: hidden;
-}
-
 img {
   max-width: 100%;
 }
@@ -44,6 +40,10 @@ button {
   border: none;
 }
 
+.app {
+  overflow: hidden;
+}
+
 .container {
   padding-right: 70px;
   padding-left: 70px;
@@ -57,10 +57,21 @@ button {
     padding-left: 20px;
   }
 }
+@media only screen and (max-width: 375px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
 
 .header {
   background: #1B3764;
-  padding: 22px 0 21px 0;
+  padding: 20px 0 21px 0;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
 }
 .header__inner, .navigation__list, .navigation, .header__socials-list, .header__socials {
   justify-content: space-between;
@@ -90,7 +101,7 @@ button {
 
 .navigation {
   justify-content: space-between;
-  flex: 0 0 55%;
+  flex: 0 0 57%;
 }
 @media only screen and (max-width: 1024px) {
   .navigation {
@@ -202,7 +213,7 @@ button {
   padding-bottom: 100px;
   align-items: center;
   display: flex;
-  padding-top: 97px;
+  padding-top: 212px;
   color: #fff;
   gap: 10px;
 }
@@ -396,6 +407,7 @@ button {
 }
 @media only screen and (max-width: 812px) {
   .block-title__text {
+    text-align: center;
     font-size: 30px;
   }
 }
@@ -417,7 +429,7 @@ button {
 
 .about-authors-block__inner {
   padding-bottom: 140px;
-  padding-top: 128px;
+  padding-top: 130px;
   flex-direction: column;
   display: flex;
 }
@@ -885,6 +897,7 @@ button {
 .vision-block__inner {
   padding-bottom: 130px;
   padding-top: 118px;
+  position: relative;
 }
 .vision-block__chapter-list {
   justify-content: space-between;
@@ -917,6 +930,19 @@ button {
 }
 .vision-block__contacts {
   color: #1B3764;
+}
+.vision-block .swiper-button-next::after, .vision-block .swiper-button-prev::after {
+  color: #FFCA42;
+  font-size: 30px;
+}
+.vision-block .swiper-button-next, .vision-block .swiper-button-prev {
+  display: none;
+  top: 40%;
+}
+@media only screen and (max-width: 1280px) {
+  .vision-block .swiper-button-next, .vision-block .swiper-button-prev {
+    display: block;
+  }
 }
 
 .vision-item {
@@ -955,6 +981,7 @@ button {
   font-weight: 400;
   font-size: 19px;
   padding-top: 22px;
+  width: 90%;
 }
 .vision-item__features, .vision-item__feature {
   align-items: center;
@@ -1022,10 +1049,6 @@ button {
 }
 .vision-slider__card {
   padding: 0 20px;
-}
-.vision-slider .swiper-button-next::after, .vision-slider .swiper-button-prev::after {
-  color: #FFCA42;
-  font-size: 30px;
 }
 
 .review-block__inner {
@@ -1215,7 +1238,7 @@ button {
     display: flex;
   }
 }
-.subscribe-form__label, .subscribe-form__input, .subscribe-form__btn {
+.subscribe-form__label, .subscribe-form__input {
   height: 100%;
   width: 100%;
 }
@@ -1267,6 +1290,8 @@ button {
 @media only screen and (max-width: 1024px) {
   .subscribe-form__btn {
     padding: 15px 40px;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -1275,6 +1300,7 @@ button {
 }
 .article-block__inner {
   padding-bottom: 140px;
+  position: relative;
   padding-top: 126px;
 }
 @media only screen and (max-width: 812px) {
@@ -1282,6 +1308,26 @@ button {
     padding-bottom: 80px;
     padding-top: 50px;
   }
+}
+.article-block .swiper-button-next {
+  right: 4%;
+}
+.article-block .swiper-button-prev {
+  left: 4%;
+}
+.article-block .swiper-button-next::after, .article-block .swiper-button-prev::after {
+  color: #1B3764;
+  position: relative;
+  font-size: 25px;
+  z-index: 1;
+}
+.article-block .swiper-button-next::before, .article-block .swiper-button-prev::before {
+  background: #FFCA42;
+  border-radius: 50%;
+  position: absolute;
+  height: 50px;
+  content: "";
+  width: 50px;
 }
 
 .article-card, .article-card__descrip {
@@ -1344,20 +1390,6 @@ button {
 
 .article-slider {
   padding: 70px 0 10px;
-}
-.article-slider .swiper-button-next::after, .article-slider .swiper-button-prev::after {
-  color: #1B3764;
-  position: relative;
-  font-size: 25px;
-  z-index: 1;
-}
-.article-slider .swiper-button-next::before, .article-slider .swiper-button-prev::before {
-  background: #FFCA42;
-  border-radius: 50%;
-  position: absolute;
-  height: 50px;
-  content: "";
-  width: 50px;
 }
 
 .social-btn__header {

@@ -1,28 +1,26 @@
 .buy-btn {
+  border: 1px solid $c-main-yellow;
+  padding: 18px 52px 19px 52px;
+  width: fit-content;
 
-    border: 1px solid $c-main-yellow;
-    padding: 18px 52px 19px 52px;   
-    width: fit-content;
+  //Adaptive changes
+  @include media('max', 'iPad') {
+    padding: 15px 42px 16px 42px;
+  }
 
-    @include media('max', 'iPad') {
-        padding: 15px 42px 16px 42px; 
-    }
+  &--color {
+    color: $c-white;
+  }
 
-    &--color {
-        color:$c-white;
-    }
+  &__title {
+    text-transform: capitalize;
+    letter-spacing: 0.57px;
+    @include f-Cardo(19px);
+    white-space: nowrap;
+    line-height: 28px;
+  }
 
-    &__title {
-        text-transform: capitalize;
-        letter-spacing: 0.57px;
-        @include f-Cardo(19px);
-        white-space: nowrap;
-        line-height: 28px;
-    }
-
-    &--order {
+  &--order {
     background: $c-main-yellow;
-    }
+  }
 }
-
-

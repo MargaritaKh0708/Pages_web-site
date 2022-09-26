@@ -1,7 +1,6 @@
 %font {
   @include font-properties(28.5px, $c-light-blue-subtext);
   @include f-Inter(18px);
-
 }
 
 %href {
@@ -16,12 +15,11 @@
   @include flex-row;
   margin-top: 54px;
 
-  //Adaptive 
-  @include media ('max','mobile-pro') {
+  //Adaptive
+  @include media('max', 'mobile-pro') {
     flex-wrap: wrap;
     gap: 20px;
   }
-
 
   &__img {
     height: 130px;
@@ -32,12 +30,11 @@
   justify-content: center;
   padding-left: 40px;
   @include flex-col;
-  
-  //Adaptive 
-  @include media ('max','mobile-pro') {
+
+  //Adaptive
+  @include media('max', 'mobile-pro') {
     padding-left: 0;
   }
-  
 
   &__name {
     @include font-properties(26.4px, $c-main-yellow);

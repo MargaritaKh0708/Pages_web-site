@@ -6,7 +6,7 @@
     gap: 30px;
 
     //Adaptive
-    @include media("max", "mobile-horizontal") {
+    @include media('max', 'mobile-horizontal') {
       flex-direction: column;
       padding-bottom: 80px;
       padding-top: 80px;
@@ -17,7 +17,7 @@
     @include flex-col;
 
     //Adaptive
-    @include media("max", "iPad-horizontal") {
+    @include media('max', 'iPad-horizontal') {
       align-items: center;
     }
   }
@@ -57,7 +57,7 @@
     gap: 20px;
 
     //Adaptive
-    @include media("max", "iPad-horizontal") {
+    @include media('max', 'iPad-horizontal') {
       height: auto;
     }
   }
@@ -72,11 +72,10 @@
   max-width: 381px;
   height: 292px;
 
-  
-    //Adaptive
-    @include media("max", "mobile-pro") {
-      height: auto;
-    }
+  //Adaptive
+  @include media('max', 'mobile-pro') {
+    height: auto;
+  }
 
   &__user {
     @include flex-row;

@@ -10,7 +10,7 @@
 
     // Adaptive changes
 
-    @include media("max", "mobile-pro") {
+    @include media('max', 'mobile-pro') {
       display: block;
     }
   }
@@ -21,7 +21,7 @@
     flex: 0 0 56%;
     gap: 30px;
 
-    @include media("max", "hd") {
+    @include media('max', 'hd') {
       position: relative;
       display: block;
       z-index: 3;
@@ -39,7 +39,7 @@
   display: flex;
   width: 303px;
 
-  @include media("max", "hd") {
+  @include media('max', 'hd') {
     margin: 10px auto;
   }
 

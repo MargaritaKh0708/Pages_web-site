@@ -30,7 +30,7 @@
 //Description styles
 
 @mixin description {
-    line-height: 28px;   //TODO change everywhere
+    line-height: 28px;   
     @include f-Inter;
     font-size: 19px;
 }
@@ -63,7 +63,7 @@
     @each $size,
     $resolution in $sizes {
         @if $media ==$size {
-            @if ($minmax  !="within") {
+            @if ($minmax  !='within') {
                 @media only screen and (#{$minmax}-width: (($resolution))) {
                     @content;
                 }

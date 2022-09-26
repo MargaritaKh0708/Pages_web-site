@@ -1,25 +1,25 @@
 // Social media buttons
 
 .social-btn {
-    &__header {
-        border: 2px solid $c-white;
-        background: $c-white;
-        height: 45px;
-        width: 45px;
+  &__header {
+    border: 2px solid $c-white;
+    background: $c-white;
+    height: 45px;
+    width: 45px;
 
-        & path {
-            fill: $c-black;
-        }
+    & path {
+      fill: $c-black;
     }
+  }
 
-    &__footer {
-        border: 2px solid $c-main-yellow;
-        background: none;
-        height: 55px;
-        width: 55px;
+  &__footer {
+    border: 2px solid $c-main-yellow;
+    background: none;
+    height: 55px;
+    width: 55px;
 
-        & path {
-            fill: $c-white;
-        }
+    & path {
+      fill: $c-white;
     }
+  }
 }

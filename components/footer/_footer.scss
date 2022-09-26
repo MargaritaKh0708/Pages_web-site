@@ -9,45 +9,44 @@
 
   &__content {
     justify-content: space-between;
-		flex-wrap: wrap;
+    flex-wrap: wrap;
     display: flex;
-		gap: 28px;
+    gap: 28px;
   }
 
   &__socials-list {
     @include flex-row;
     margin-top: 20px;
     gap: 10px;
-
   }
 
   &__sub-content {
-		@include font-properties(26px, $c-light-blue-subtext, 0.17px);
-		@include f-Inter(17px);
-		align-self: center;
-		padding-top: 95px;
+    @include font-properties(26px, $c-light-blue-subtext, 0.17px);
+    @include f-Inter(17px);
+    align-self: center;
+    padding-top: 95px;
 
-		& a {
-			color: $c-white;
-		}
+    & a {
+      color: $c-white;
+    }
   }
 }
 
 .footer-list {
   @include flex-col;
 
-	&--align {
-		align-self: center;	
-	}
+  &--align {
+    align-self: center;
+  }
 
   &__title {
-		@include font-properties(34px, $c-white, 0.384px );
+    @include font-properties(34px, $c-white, 0.384px);
     @include f-Cardo(24px);
-		padding-bottom: 24px;
+    padding-bottom: 24px;
   }
 
   &__item {
-		@include font-properties(31px, $c-light-blue-subtext, 0.18px);
+    @include font-properties(31px, $c-light-blue-subtext, 0.18px);
     flex-direction: row-reverse;
     justify-content: flex-end;
     @include flex-row;
@@ -66,17 +65,17 @@
 // Contacts styles
 
 .contacts {
-  &__item{
-		@include font-properties(27px, $c-white, 0.36px);
-		justify-content: space-between;
-		padding-bottom: 28px;
-		@include flex-row;
+  &__item {
+    @include font-properties(27px, $c-white, 0.36px);
+    justify-content: space-between;
+    padding-bottom: 28px;
+    @include flex-row;
     @include f-Cardo;
   }
   &__subtext {
-		@include font-properties(27px, $c-light-blue-subtext);
+    @include font-properties(27px, $c-light-blue-subtext);
     @include f-Inter(17px);
     line-height: 27px;
-		flex: 0 0 59%;
+    flex: 0 0 59%;
   }
 }

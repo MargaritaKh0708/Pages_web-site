@@ -8,20 +8,18 @@
     @include flex-row;
     flex-wrap: wrap;
 
-     //Adaptive changes
-  @include media('max', 'mobile-pro') {
-    padding-bottom: 80px;
-    padding-top: 80px;
+    //Adaptive changes
+    @include media('max', 'mobile-pro') {
+      padding-bottom: 80px;
+      padding-top: 80px;
     }
 
     //Adaptive changes
     @include media('max', 'hd') {
       justify-content: center;
       gap: 20px;
-      }
-
+    }
   }
-
 
   &__content {
     @include flex-col;
@@ -32,7 +30,6 @@
     @include font-properties(34px, $c-main-gray);
     @include f-Inter(19px);
     padding-top: 26px;
-
   }
 }
 .rewards-list {
@@ -40,8 +37,8 @@
   padding-top: 42px;
   @include flex-row;
 
-  //Adaptive 
-  @include media ('max','mobile-pro') {
+  //Adaptive
+  @include media('max', 'mobile-pro') {
     align-items: flex-start;
   }
 
@@ -49,15 +46,14 @@
     border-left: 1px solid $c-main-yellow;
     padding-left: 37px;
     @include flex-col;
-    flex: 1 1 33%; 
+    flex: 1 1 33%;
 
-
-    &:first-of-type{
+    &:first-of-type {
       padding-left: 10px;
       border: none;
     }
 
-    &:nth-of-type(2){
+    &:nth-of-type(2) {
       padding-right: 14px;
     }
   }
@@ -74,7 +70,6 @@
   }
 }
 
-
 .bordered-cover {
   border: 10px solid $c-main-yellow;
   position: relative;
@@ -84,7 +79,7 @@
   //Adaptive changes
   @include media('max', 'mobile-pro') {
     display: none;
-    }
+  }
 
   &::after {
     content: url('../../assets/images/man.png');
@@ -102,8 +97,8 @@
       content: url('../../assets/images/girl.png');
       bottom: 0px;
       right: 0px;
+    }
   }
-}
   &--size {
     margin-left: 20px;
     height: 652px;

@@ -1,44 +1,47 @@
-.circle{
-    border: 1px solid $c-main-yellow;
-    background: $c-main-yellow;
-    border-radius: 100px;
-    position: relative;
-    display: block;
-    height: 16px;
-    width: 16px;
+.circle {
+  border: 1px solid $c-main-yellow;
+  background: $c-main-yellow;
+  border-radius: 100px;
+  position: relative;
+  display: block;
+  height: 16px;
+  width: 16px;
 
-    @include media('max', 'iPad') {
-        height: 12px;
+  //Adaptive changes
+  @include media('max', 'iPad') {
+    height: 12px;
     width: 12px;
-    }
+  }
 
-    &--size-50 {
-        height: 50px;
-        width: 50px;
-    }
+  // Variations of size
 
-    &--size-13 {
-        height: 12.67px;
-        width: 12.67px;
-    }
+  &--size-50 {
+    height: 50px;
+    width: 50px;
+  }
 
-    &--size-20 {
-        height: 20px;
-        width: 20px;
-    }
+  &--size-13 {
+    height: 12.67px;
+    width: 12.67px;
+  }
 
-    &--size-2 {
-        border: 1.5px solid $c-main-yellow;
-        height: 2px;
-        width: 2px;
-    }
+  &--size-20 {
+    height: 20px;
+    width: 20px;
+  }
 
-    &--empty {
-        background: none;
-    }
+  &--size-2 {
+    border: 1.5px solid $c-main-yellow;
+    height: 2px;
+    width: 2px;
+  }
 
-    &--half {
-        background: linear-gradient($c-main-yellow 50%, $c-transparent 0);
-        transform: rotate(-90deg);
-    }
+  &--empty {
+    background: none;
+  }
+
+  &--half {
+    background: linear-gradient($c-main-yellow 50%, $c-transparent 0);
+    transform: rotate(-90deg);
+  }
 }
